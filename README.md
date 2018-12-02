@@ -30,7 +30,7 @@ The following arguments are supported:
 
 * `replica_bucket_storage_class` - (Optional) The s2 storage class for replica bucket. The default for this attribute is REDUCED_REDUNDANCY.
 
-* `enable_versioning` - (Optional) Enable versioning on the buckets. The default is true.
+* `versioning_enabled` - (Optional) Enable versioning on the buckets. The default is true.
 
 ## Attributes Reference
 In addition to all arguments above, the following attributes are exported:

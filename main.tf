@@ -23,7 +23,7 @@ variable "replica_bucket_storage_class" {
   default     = "REDUCED_REDUNDANCY"
 }
 
-variable "enable_versioning" {
+variable "versioning_enabled" {
   description = "(Optional) Enable versioning on the buckets. The default is true."
   default     = "true"
 }
@@ -132,7 +132,7 @@ resource "aws_s3_bucket" "replica" {
   region   = "${var.replica_bucket_region}"
 
   versioning {
-    enabled = "${var.enable_versioning}"
+    enabled = "${var.versioning_enabled}"
   }
 }
 
@@ -157,7 +157,7 @@ resource "aws_s3_bucket" "source" {
   }
 
   versioning {
-    enabled = "${var.enable_versioning}"
+    enabled = "${var.versioning_enabled}"
   }
 }
 
